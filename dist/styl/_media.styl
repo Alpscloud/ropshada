@@ -1,0 +1,220 @@
+// Media queris mixins add there
+@import '../../node_modules/stylus-media-queries/index.styl'
+/* -------Screen sizes----------- 
++screen(minWidth, maxWidth)
++max-screen(maxWidth)
++min-screen(minWidth)
++screen-height(minHeight, maxHeight)
++max-screen-height(maxHeight)
++min-screen-height(minHeight)
+*/
+
+
++max-screen(899px)
+	.indent__box
+		margin-right 10px
+		&:nth-child(2)
+			margin-right 0
+		&:last-child
+			margin-top 10px
+			margin-right 0
+			
++max-screen(840px)
+	.indent__item
+		width 260px
+		flex 1 0 270px
+		margin-right 5px
+		height 184px
+		&:nth-child(2)
+			margin-right 0
+			margin-bottom 5px
+	
+		&:last-child
+			margin-right 0
+			
++max-screen(800px)
+	.nav__list--link
+		padding-right 0
+		padding-left 0
+		
+	// .indent__item
+	// 	margin-right 5px
+	// 	&:nth-child(3)
+	// 		margin-right 0
+	// 	&:last-child
+	// 		margin-right 0
+	// 		margin-top 5px
+			
+	.footer__row
+		display block
+		text-align center
+	.social__list
+		margin 20px 0
+		
+	.header__units
+		margin-top 0
+		margin-bottom 15px
+		
++max-screen(767px)
+	.header
+		&__wrapper
+			padding 15px 15px 15px 15px
+	.header__logo
+		text-align left
+		position relative
+		// top 0
+		// left 0
+		// width 100%
+		// background rgba($dark-color, .4)
+		// z-index 10
+		padding 5px 10px
+		.hamburger
+			display inline-block
+			position absolute
+			right 10px
+			top 50%
+			transform translateY(-50%)
+	.aside
+		display none
+	.content__wrapper
+		float none
+		margin-left 0
+		border-left 0
+		padding-left 0
+		width 100%
+		
+
+	.nav
+		position absolute
+		display none
+		top 87px
+		left 0
+		width 100%
+		z-index 15
+		&__list
+			width 100%
+			height 100%
+			&--item
+				display block
+				width 100%
+				&--hidden
+					display block
+			&--link
+				background rgba($dark-color, .8)
+			&--submenu
+				&--hidden
+					display block
+				
+	.header__units
+		margin-top 0
+		padding 0 10px
+	.header__descr
+		margin 7px 0
++max-screen(700px)
+	.header__units
+		justify-content center
+		h4
+			background rgba($dark-color, .6)
+	.indent__item
+		height 200px
+	.header__units--item
+		padding 0 20px
++max-screen(640px)
+	.indent__item
+		margin-right 5px
+		&:nth-child(2)
+			margin-right 0
+		&:nth-child(3)
+			margin-right 5px
+			margin-top 5px
+		&:last-child
+			margin-right 0
+			margin-top 5px
+		
+	.box__row
+		display block
+	.indent__box
+		width 100%
+		display block
+		margin-right 0 !important
+		margin-top 0 !important
+		margin-bottom 15px
+		&:last-child 
+			margin-bottom 0
+	
+	.questions__list--item
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
+			
+	.social__list--item
+		margin-right 5px
+		&:last-child
+			margin-right 0
+			
+	.header__descr
+		strong
+			float none
+			margin-bottom 8px
+			display block
+		.phones
+			text-align center
+			margin-left 0
+			float none
+			
++max-screen(560px)
+	.indent__item
+		height auto
+		margin-right 0 !important
+		margin-top 0 !important
+		margin-bottom 15px
+		&:nth-child(2)
+			margin-bottom 15px
+		&:last-child 
+			margin-bottom 0
+			
+	.gallery__item
+		width 150px
+		height 100px
+		padding 5px
+		
++max-screen(450px)
+	.header__units
+		flex-direction column
+		align-items center
+		&--item
+			margin-bottom 20px
+			&:last-child
+				margin-bottom 0
+		h4
+			background rgba($dark-color, .6)
+	
+	.indent__row
+		flex-direction column
+		align-items center	
+	
+		
+	.indent__box
+		margin-right 0 !important
+		margin-top 0 !important
+		margin-bottom 15px
+		display block
+		width 100%
+		&:last-child 
+			margin-bottom 0
+			
+	.news__item
+		&--thumb
+			float none
+			width 100%
+			margin-bottom 20px
+			height auto
+		&--descr
+			margin-left 0
+			
++max-screen(325px)
+	.content 
+		.img-left1
+			float none
+			max-width 100%
+			margin 15px 0

@@ -1,0 +1,317 @@
+//Reset css
+@import '_reset.styl'
+// File with all variables styles
+@import '_vars.styl'
+
+// File with basic style (body styles, etc)
+@import '_basic.styl'
+// File with header styles
+@import '_header.styl'
+
+//interface styles (buttons, links, etc)
+@import '_interface.styl'
+// Forms style
+@import '_form.styl'
+
+
+.main
+	width 100%
+	max-width 900px
+	margin 0 auto
+	box-shadow 0 0 50px -5px rgba($dark-color,.8)
+	
+.indent-row	
+	background #bbe3ed
+	background -moz-linear-gradient(top, #bbe3ed 0%, #ffffff 100%)
+	background -webkit-linear-gradient(top, #bbe3ed 0%,#ffffff 100%)
+	background linear-gradient(to bottom, #bbe3ed 0%,#ffffff 100%)
+	padding 10px
+	
+	display flex
+	justify-content space-between
+	align-items stretch
+	flex-wrap wrap
+	
+	position relative
+
+.indent__item
+	width 220px
+	flex 1 0 200px
+	margin-right 5px
+	&:first-child
+		background #2f7107
+		background -moz-linear-gradient(top, #2f7107 0%, #015507 100%)
+		background -webkit-linear-gradient(top, #2f7107 0%,#015507 100%)
+		background linear-gradient(to bottom, #2f7107 0%,#015507 100%)
+		
+	&:nth-child(2)
+		background #609621
+		background -moz-linear-gradient(top, #609621 0%, #2f7107 100%)
+		background -webkit-linear-gradient(top, #609621 0%,#2f7107 100%)
+		background linear-gradient(to bottom, #609621 0%,#2f7107 100%)
+	&:nth-child(3)
+		
+		background #85b916
+		background -moz-linear-gradient(top, #85b916 0%, #619624 100%)
+		background -webkit-linear-gradient(top, #85b916 0%,#619624 100%)
+		background linear-gradient(to bottom, #85b916 0%,#619624 100%)
+	&:last-child
+		
+		background #a6dc2c
+		background -moz-linear-gradient(top, #a6dc2c 0%, #84b815 100%)
+		background -webkit-linear-gradient(top, #a6dc2c 0%,#84b815 100%)
+		background linear-gradient(to bottom, #a6dc2c 0%,#84b815 100%)
+		margin-right 0
+		.indent__item--title
+			color #0B5B05
+			text-shadow 1px 1px 3px $light-color
+			small
+				font-size .8em
+
+	&--link
+		display block
+		height 100%
+		padding 18px 10px
+		color $light-color
+		text-align center
+		h3
+			text-decoration underline
+
+			
+	&--title
+		font-size 26px
+		line-height 1
+		text-shadow 1px 1px 3px $dark-color
+		font-weight bold
+		padding-bottom 5px
+		border-bottom 1px solid #68A231
+		min-height 60px
+		display table
+		width 100%
+		span
+			display table-cell
+			vertical-align middle
+	p
+		margin 10px 0
+
+.btn__indent
+	border-radius 100%
+	background #2C7207
+	text-align center
+	padding 5px 15px
+	color $light-color
+	box-shadow 1px 1px 5px $dark-color
+
+.aside
+	float left
+	width 15%
+	text-align left
+	height 100%
+	&__title
+		font-weight bold
+		font-size 16px
+		margin-bottom 10px
+		color #2572A2
+	&__list
+		&--item
+			display block
+			padding 10px 0
+			border-bottom 1px solid #D2D2D2
+		&--submenu
+			li
+				list-style disc inside
+			&--hidden
+				display none
+		&--link
+			display block
+			text-decoration underline
+			font-size 13px
+			font-weight bold
+			&:hover
+				text-decoration none
+				color #2572a2
+			&.current
+				text-decoration none
+				color #2572a2
+.content
+	background $light-color
+	padding 10px
+	text-align left
+	&__wrapper
+		width 83%
+		float left
+		border-left 1px solid #B9E2EC
+		padding-left 30px
+
+h1
+	font-size 14pt
+	color $accent-color
+	padding 12px 0
+	font-weight 600
+h2
+	padding 12px 0 7px 0
+	color $accent-color
+	font-size 13pt
+	font-weight 600
+	
+.indent-box
+	strong
+		font-weight bold
+
+		
+.content
+	
+	p
+		margin 0 0 7px 0
+	.img-left1
+		float left 
+		margin 0 20px 0 0
+		max-width 220px
+		
+	a
+		color $text-color
+		text-decoration underline
+		&:hover
+			text-decoration none
+			
+.gallery__wrapper
+	margin-bottom 25px
+.gallery__item
+	padding 3px
+	display inline-block
+	vertical-align top
+	width 160px
+	height 110px
+	margin-right -4px
+	img
+		display block
+		
+.news__item
+	border-bottom #e5e5e0 1px solid
+	padding-bottom 20px
+	margin-bottom 10px
+	h3
+		a
+			font-weight bold
+			font-size 14px
+			display inline-block
+			text-decoration none
+			margin-bottom 10px
+			color $dark-color
+			&:hover
+				text-decoration underline
+				
+	&:last-child
+		border-bottom none
+				
+	&--thumb
+		display block
+		width 160px
+		height 140px
+		float left
+		img
+			display block
+			height 100%
+		&:hover
+			opacity .8
+	&--descr
+		margin-left 170px
+		p
+			margin-bottom 15px
+	
+	.btn__more
+		display inline-block
+		text-decoration none
+
+.btn__more
+	display inline-block
+	padding 5px 10px
+	text-transform uppercase
+	font-size 14px
+	color #545250
+	text-decoration none
+	background #dcdcd5
+	&:hover
+		background darken(#dcdcd5, 10%)
+		text-decoration none
+		
+.pagination
+	font-size 16px
+	margin-bottom 15px
+	span
+		display inline-block
+		vertical-align middle
+		margin-right 5px
+	&__list
+		display inline-block
+		vertical-align middle
+		&--item
+			display inline-block
+		&--link
+			display block
+			color $dark-color
+			text-decoration underline
+			&:hover
+				text-decoration none
+				color #2572a2
+				
+	&__single
+		margin 30px 0
+		.prev
+			float left
+		.next
+			float right
+			
+.content__block
+	&--single
+		p
+			margin-bottom 15px
+			color $dark-color
+	&--question
+		ul
+			margin-bottom 15px
+
+			strong
+				color #2572a2
+				font-weight bold
+		
+.contacts__block
+	color $dark-color
+	strong
+		font-weight bold
+		
+.form
+	margin-bottom 30px
+	&__block
+		h2
+			color #2572a2
+			padding 10px 0 15px 0
+			font-weight bold
+	&__input
+		margin-bottom 15px
+		label
+			display block
+			font-size 16px
+			font-weight bold
+			margin-bottom 5px
+		input,
+		textarea
+			font-size 14px
+			padding 5px 10px
+			width 100%
+			display block
+			transition all .23s ease-in-out
+			border 1px solid #d5d5d3
+			&:hover
+				border-color $accent-color
+			&:focus
+				border-color $accent-color
+		textarea
+			resize vertical
+			min-height 150px
+			width 100%
+	
+
+@import '_footer.styl'
+// File with media quaeries styles
+@import '_media.styl'

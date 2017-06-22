@@ -1,0 +1,95 @@
+@import '_vars.styl'
+
+
+.box
+	background $light-color
+	&__row
+		display flex
+		align-items stretch
+		justify-content space-between
+		flex-wrap wrap
+		
+.indent__box
+	width 296px
+	flex 1 0 296px
+	background #DAF0F5
+	margin-right 2px
+	padding 10px 20px 20px 20px
+	text-align center
+	&:last-child
+		margin-right 0
+	&--title
+		font-weight bold
+		font-size 18px
+		margin-bottom 7px
+		color #2572A2
+		text-decoration underline
+	&--img
+		
+		img
+			display block
+	&--link
+		text-align right
+		a
+			color $text-color
+			text-decoration underline
+			font-size 14px
+			&:hover
+				text-decoration none
+		
+	p
+		margin 10px 0
+		
+.questions__list
+	margin-bottom 10px
+	&--item
+		display block
+		margin-bottom 5px
+		&:last-child
+			margin-bottom 0
+	&--link
+		display block
+		position relative
+		color $accent-color
+		text-decoration underline
+		padding-left 20px
+		text-align left
+		font-size 14px
+		font-weight 500
+		&:before
+			content ''
+			position absolute
+			display inline-block
+			width 14px
+			height 14px
+			top 3px
+			left 0
+			background url('../images/marker.gif') center no-repeat
+		&:hover
+			text-decoration none
+
+.footer
+	&__row
+		display flex
+		padding 10px
+		flex-wrap wrap
+		align-items center
+		justify-content space-between
+		color #ABDC40
+		font-size 14px
+		a
+			font-weight bold
+			color #ABDC40
+			
+.social__list
+	&--item
+		display inline-block
+		margin-right 10px
+		&:last-child
+			margin-right 0
+	&--link
+		display block
+		width 32px
+		height 32px
+		img
+			display block
